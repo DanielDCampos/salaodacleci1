@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Digital Interativa | Salão da Cleci</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFF8F5] text-[#5C3A2E]">
+
+    <header class="bg-[#FFF8F5]/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#D9866F]">Salão da Cleci</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#oportunidade" class="hover:text-[#D9866F] transition-colors">A Oportunidade</a>
+                <a href="#solucao" class="hover:text-[#D9866F] transition-colors">A Solução</a>
+                <a href="#roi" class="hover:text-[#D9866F] transition-colors">Seu Crescimento</a>
+                <a href="#contato" class="bg-[#D9866F] text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all">Próximos Passos</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#oportunidade" class="block py-2 px-6 hover:bg-gray-100">A Oportunidade</a>
+            <a href="#solucao" class="block py-2 px-6 hover:bg-gray-100">A Solução</a>
+            <a href="#roi" class="block py-2 px-6 hover:bg-gray-100">Seu Crescimento</a>
+            <a href="#contato" class="block py-2 px-6 hover:bg-gray-100">Próximos Passos</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-pattern">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Olá, Cleci!</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">Esta é uma proposta digital interativa para mostrarmos como podemos construir juntos o futuro digital do seu salão, transformando sua presença online em uma poderosa ferramenta de crescimento.</p>
+            </div>
+        </section>
+
+        <section id="oportunidade" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">A Oportunidade Digital para o seu Salão</h2>
+                    <p class="max-w-3xl mx-auto text-gray-600">Em um mercado de beleza vibrante, a presença digital não é mais um luxo, é uma necessidade. Seus futuros clientes estão online agora, procurando por serviços como os seus. A questão é: eles estão encontrando você?</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-[#FFF8F5] p-8 rounded-lg shadow-sm">
+                        <h3 class="text-4xl font-bold text-[#D9866F] mb-2">56%</h3>
+                        <p class="text-gray-600">dos consumidores não confiam em negócios sem um site profissional.</p>
+                    </div>
+                    <div class="bg-[#FFF8F5] p-8 rounded-lg shadow-sm">
+                        <h3 class="text-4xl font-bold text-[#D9866F] mb-2">67%</h3>
+                        <p class="text-gray-600">dos clientes preferem a conveniência do agendamento online 24/7.</p>
+                    </div>
+                    <div class="bg-[#FFF8F5] p-8 rounded-lg shadow-sm">
+                        <h3 class="text-4xl font-bold text-[#D9866F] mb-2">80%</h3>
+                        <p class="text-gray-600">de redução de "não comparecimentos" com lembretes automáticos.</p>
+                    </div>
+                </div>
+                 <div class="mt-16">
+                    <p class="text-center text-gray-600 mb-4">Um site profissional é a base para construir confiança e otimizar suas operações.</p>
+                    <div class="chart-container">
+                        <canvas id="prioridadesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucao" class="py-16 md:py-24 bg-pattern">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">A Solução Completa para o Salão da Cleci</h2>
+                    <p class="max-w-3xl mx-auto text-gray-600">Proponho mais que um site: uma plataforma de negócios digital. Escolha um pacote abaixo para ver os detalhes e como cada um pode impulsionar seu crescimento.</p>
+                </div>
+
+                <div class="flex justify-center space-x-4 mb-10">
+                    <button id="btn-essencial" class="px-6 py-3 rounded-full font-semibold transition-all bg-[#D9866F] text-white">Presença Essencial</button>
+                    <button id="btn-crescimento" class="px-6 py-3 rounded-full font-semibold transition-all bg-white text-[#D9866F] border border-[#D9866F]">Crescimento Digital</button>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div>
+                            <h3 id="package-title" class="text-2xl font-bold mb-4 text-[#D9866F]">Pacote Presença Essencial</h3>
+                            <ul id="package-features" class="space-y-3 text-gray-700 list-disc list-inside">
+                                
+                            </ul>
+                        </div>
+                        <div class="mt-6 md:mt-0 text-right">
+                            <p class="text-lg text-gray-500">Investimento</p>
+                            <p id="package-price" class="text-4xl font-bold text-[#5C3A2E]">R$ 8.500,00</p>
+                            <p class="text-sm text-gray-500">Pagamento facilitado</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-center mb-8">Nosso Cronograma de Trabalho</h3>
+                    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                        <div class="p-4">
+                            <div class="bg-[#D9866F] text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 font-bold text-xl">1</div>
+                            <h4 class="font-bold">Descoberta</h4>
+                            <p class="text-sm text-gray-600">1 semana</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="bg-[#f0a996] text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 font-bold text-xl">2</div>
+                            <h4 class="font-bold">Design</h4>
+                            <p class="text-sm text-gray-600">1-2 semanas</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="bg-[#f5c3b5] text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 font-bold text-xl">3</div>
+                            <h4 class="font-bold">Desenvolvimento</h4>
+                            <p class="text-sm text-gray-600">2-3 semanas</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="bg-[#f9dcd2] text-[#5C3A2E] rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 font-bold text-xl">4</div>
+                            <h4 class="font-bold">Lançamento</h4>
+                            <p class="text-sm text-gray-600">1 semana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roi" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Calcule o Crescimento do Seu Salão</h2>
+                    <p class="max-w-3xl mx-auto text-gray-600">Vamos transformar o investimento em lucro. Use a calculadora abaixo para simular o retorno que o novo site pode gerar. Arraste os valores para ver a mágica acontecer no gráfico!</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-[#FFF8F5] p-8 rounded-lg shadow-sm space-y-6">
+                        <div>
+                            <label for="ticket-medio" class="font-semibold">Seu Ticket Médio por Cliente (R$)</label>
+                            <div class="flex items-center space-x-4">
+                                <input type="range" id="ticket-medio" min="30" max="300" value="90" class="w-full">
+                                <span id="ticket-medio-valor" class="font-bold text-lg w-16 text-right">R$ 90</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="novos-clientes" class="font-semibold">Novos Clientes por Mês (via site)</label>
+                            <div class="flex items-center space-x-4">
+                                <input type="range" id="novos-clientes" min="5" max="100" value="22" class="w-full">
+                                <span id="novos-clientes-valor" class="font-bold text-lg w-16 text-right">22</span>
+                            </div>
+                        </div>
+                        <div class="text-center pt-4">
+                            <p class="text-gray-600">Lucro Líquido Mensal Adicional Estimado:</p>
+                            <p id="lucro-mensal" class="text-4xl font-bold text-[#D9866F]">R$ 990,00</p>
+                            <p class="text-sm text-gray-500 mt-2">Retorno do investimento em <strong id="payback">~8.5 meses</strong></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato" class="py-16 md:py-24 bg-pattern">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Vamos dar o Próximo Passo?</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-8">Estou pronto para conversar, tirar suas dúvidas e começarmos a construir juntos o futuro digital do Salão da Cleci. Acredito que esta parceria trará resultados incríveis para o seu negócio.</p>
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto inline-block text-left">
+                    <h3 class="text-xl font-bold">Daniel Machado Delfino Campos</h3>
+                    <p class="text-gray-600">Programador de Sistemas Certificado (SENAC)</p>
+                    <a href="mailto:contato@email.com" class="mt-4 inline-block bg-[#D9866F] text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all font-semibold">Agendar uma Conversa</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#5C3A2E] text-white py-6">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Salão da Cleci. Proposta desenvolvida por Daniel Machado Delfino Campos.</p>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
