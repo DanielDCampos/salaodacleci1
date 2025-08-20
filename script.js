@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         } catch (error) {
             console.error("Error calling Gemini API:", error);
-            resultElement.innerHTML = '<p class="text-red-500">Desculpe, ocorreu um erro ao contatar a IA. Por favor, tente novamente mais tarde.</p>';
+            resultElement.innerHTML = '<p class="text-red-500">Desculpe, ocorreu um erro ao contatar a IA. Por favor, tente novamente mais tarde dghstryhrftjfdjdfkjtg.</p>';
         }
     }
 
